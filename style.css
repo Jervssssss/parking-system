@@ -1,0 +1,189 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('BCP.png');
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 120vh;
+    color: #e1e1eb;
+}
+
+/* Container Styles */
+.container {
+    max-width: 350px;
+    width: 100%;
+    padding: 40px;
+    background-color: rgb(0 0 0 / 69%);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    color: #f2f2f2;
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+    
+}
+
+/* Hover Effects for Container */
+.container:hover {
+    transform: scale(1.02);
+}
+
+/* Parking Type Styles */
+.parking-type {
+    background-color: #175797;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0px 4px 6px rgb(0 0 0 / 21%);
+    transition: transform 0.3s, background-color 0.3s ease-in-out;
+}
+
+.parking-type:hover {
+    transform: scale(1.05);
+    background-color: #1270cf;
+}
+
+.parking-type h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.parking-type p {
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+
+/* Form Elements */
+input[type="text"], input[type="password"], input[type="email"], button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 1rem;
+    border-radius: 25px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+/* Button Styles */
+button {
+    background-color: #3a3b3c;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #4f5d75;
+    transform: scale(1.05);
+}
+
+/* Link Styling */
+.link {
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+    color: #b8c1ec;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.link:hover {
+    color: #f2f2f2;
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+        margin: 20px;
+    }
+
+    .parking-type {
+        padding: 18px;
+        margin: 8px 0;
+    }
+
+    h1, h2 {
+        font-size: 1.8rem;
+    }
+
+    input[type="text"], input[type="password"], input[type="email"], button {
+        padding: 10px;
+        font-size: 1rem;
+    }
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 500px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .parking-type {
+        padding: 15px;
+        margin: 8px 0;
+    }
+
+    input[type="text"], input[type="password"], input[type="email"], button {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Keyframe for Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+/* Misc Styling for Form Sections */
+.form-section {
+    margin-bottom: 20px;
+}
+
+.form-section input, .form-section select, .form-section button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+/* Hide Elements */
+.hidden {
+    display: none;
+}
+a
+{
+    cursor: pointer;
+    color: white;
+    text-decoration: auto;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Parking Login System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <img src="bcp-olp-logo-mini2 (1).png" alt="Bestlink College Logo" width="120" height="70">
+        <h1>Bestlink College of the Philippines</h1>
+
+        <!-- Login Section -->
+        <div class="form-section" id="loginSection">
+            <h3>Login Account</h3>
+            <form id="loginForm">
+                <input type="text" id="loginUsername" placeholder="Username" required aria-label="Username">
+                <input type="password" id="loginPassword" placeholder="Password" required aria-label="Password">
+                <button type="submit">Login</button>
+                <div class="links">
+                    <a href="#" onclick="showSection('forgetPasswordSection')">Forget Password</a> | 
+                    <a href="#" onclick="showSection('registerSection')">Create Account</a>
+                </div>
+            </form>
+        </div>
+
+        <!-- Registration Section -->
+        <div class="form-section hidden" id="registerSection">
+            <h3>Create Account</h3>
+            <form id="registerForm">
+                <input type="text" id="newUsername" placeholder="Username" required aria-label="New Username">
+                <input type="password" id="newPassword" placeholder="Password" required aria-label="New Password">
+                <input type="email" id="email" placeholder="Email" required aria-label="Email">
+                <button type="submit">Create Account</button>
+                <div class="links">
+                    <a href="#" onclick="showSection('loginSection')">Back to Login</a>
+                </div>
+            </form>
+        </div>
+
+        <!-- Forget Password Section -->
+        <div class="form-section hidden" id="forgetPasswordSection">
+            <h3>Forget Password</h3>
+            <form id="forgetPasswordForm">
+                <input type="text" id="forgetUsername" placeholder="Username" required aria-label="Forget Username">
+                <button type="submit">Reset Password</button>
+                <div class="links">
+                    <a href="#" onclick="showSection('loginSection')">Back to Login</a>
+                </div>
+            </form>
+        </div>
+
+        <!--  Types Management Section -->
+        <div class="form-section hidden" id="typesManagementSection">
+            <h3>Parking Types</h3>
+            <div class="parking-type">
+                <h3>Student Parking</h3>
+                <p>For students only</p>
+                <button onclick="showSlotSelection('Student Parking')">Continue</button>
+            </div>
+            <div class="parking-type">
+                <h3>Teachers Parking</h3>
+                <p>For Teachers and Principal only</p>
+                <button onclick="showSlotSelection('Teachers Parking')">Continue</button>
+            </div>
+            <div class="parking-type">
+                <h3>Visitors Parking</h3>
+                <p>For visitors only</p>
+                <button onclick="showSlotSelection('Visitors Parking')">Continue</button>
+            </div>
+        </div>
+
+        <!-- Slot Selection Section -->
+        <section class="form-section hidden" id="slot-section">
+            <h2>Parking Slot</h2>
+            <div id="slots-container">
+                <!-- Slots dynamically generated here -->
+                <button onclick="selectSlot('Slot 1')">Slot 1</button>
+                <button onclick="selectSlot('Slot 2')">Slot 2</button>
+                <button onclick="selectSlot('Slot 3')">Slot 3</button>
+            </div>
+        </section>
+
+        <!-- Duration and Fee Management Section -->
+        <section class="form-section hidden" id="fee-section">
+            <h2>Duration & Fee</h2>
+            <form id="duration-form">
+                <label for="hours">Parking Duration (hours):</label>
+                <input type="number" id="hours" required>
+                <button type="submit">Calculate Fee</button>
+            </form>
+            <div id="fee-display">
+                <p>Fee: <span id="fee">₱ 0</span></p>
+            </div>
+        </section>
+
+        <!-- Receipt Section -->
+        <section class="form-section hidden" id="receipt-section">
+            <h2>Receipt</h2>
+            <div id="receipt-details">
+                <!-- Receipt details will be displayed here -->
+            </div>
+            <button onclick="showSection('loginSection')">Back to Login</button>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Parking System BCP</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+ 
+   
+</body>
+</html>
+
+
